@@ -1,0 +1,39 @@
+# Binance API Configuration
+
+# Testnet Configuration
+testnet:
+  base_url: https://testnet.binance.vision/api
+  websocket_url: wss://testnet.binance.vision/ws
+  alternative_endpoints:
+    - https://testnet.binancefuture.com/api
+    - https://testnet.binance.vision
+  
+# Proxy Configuration
+proxy:
+  enabled: true
+  providers:
+    - name: allorigins
+      http: http://api.allorigins.win/raw?url=
+      https: https://api.allorigins.win/raw?url=
+
+# API Settings
+api:
+  retry_attempts: 3
+  timeout_seconds: 30
+  keepalive: true
+
+# Trading Parameters
+trading:
+  default_risk_percentage: 1.0
+  max_leverage: 20
+  order_types:
+    - LIMIT
+    - MARKET
+    - STOP_LOSS
+    - TAKE_PROFIT
+
+# Supported Trading Pairs
+trading_pairs:
+  - BTCUSDT
+  - ETHUSDT
+  - BNBUSDT
